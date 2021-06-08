@@ -60,6 +60,11 @@ function search(Request $req)
             ->get();
             return view('cartList',['products'=>$products]);
         }
+        function removeCart($id)
+        {
+            Cart::destroy($id);
+            return redirect('cartlist');
+        }
     
 }
 

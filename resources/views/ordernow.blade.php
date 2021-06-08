@@ -31,7 +31,7 @@
                   <input type="text" name="address" class="form-control" placeholder="enter your Address"><br>
                 </div>
                 <div class="form-group">
-                    <textarea name="description" id="1" cols="60" rows="5" placeholder="Any description"></textarea>
+                    <textarea name="description" id="1" cols="60" rows="5" placeholder="Any Order description"></textarea>
                 </div>  
                 <div class="form-group">
                   <input type="number" name="phone" class="form-control" placeholder="enter phone number"><br>

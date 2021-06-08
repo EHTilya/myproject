@@ -15,7 +15,7 @@ if(Session::has('user'))
       </div>
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="">Orders</a></li>
+        <li><a href="/project/myproject/public/myorders">Orders</a></li>
       </ul>
       <form class="navbar-form navbar-left" action="/project/myproject/public/search">
         <div class="form-group">

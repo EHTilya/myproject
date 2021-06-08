@@ -90,13 +90,23 @@ function search(Request $req)
                 $order->payment_method=$req->payment;
                 $order->address=$req->address;
                 $order->phone=$req->phone;
-                $order->description=$req->description;
+                $order->order_description=$req->description;
                 $order->save();
                 $allCart=Cart::where('persons_id',$userId)->delete();
 
             }
             
             return redirect('home');
+        }
+
+        function myOrders()
+        {
+            $userId=Session::get('user')['id'];
+            $order=DB::table('orders')
+            ->join('products','orders.product_id','=','products.id')
+            ->where('orders.persons_id',$userId)
+            ->get();
+            return view('myorders',['order'=>$order]);
         }
 
     

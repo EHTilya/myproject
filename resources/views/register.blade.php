@@ -29,7 +29,7 @@
                   <label for="exampleInputPassword1"><b>Password</b></label>
                   <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                 </div>
-                <button type="submit" class="btn btn-primary">Add Stuff</button>
+                <button type="submit" class="btn btn-primary">Register</button>
               </form>  
 
         </div>

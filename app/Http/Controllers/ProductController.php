@@ -65,6 +65,16 @@ function search(Request $req)
             Cart::destroy($id);
             return redirect('cartlist');
         }
+
+        function orderNow()
+        {
+            $userId=Session::get('user')['id'];
+            $total=DB::table('cart')
+            ->join('products','cart.product_id','=','products.id')
+            ->where('cart.persons_id',$userId)
+            ->sum('products.price');
+            return view('ordernow',['total'=>$total]);
+        }
     
 }
 

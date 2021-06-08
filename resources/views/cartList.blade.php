@@ -5,7 +5,7 @@
         <div class="trending-wrapper">
             <h3>Results for selected Design</h3>
             <div class="order-button">
-                <a class="btn btn-success" href="/project/eCommerce/orderNow">Order Now</a>
+                <a class="btn btn-success" href="/project/myproject/public/ordernow">Order Now</a>
             </div>
             @foreach ($products as $item)
             <div class=" row searched-item cart-list-devider">
@@ -17,7 +17,9 @@
                 <div class="col-sm-5">
                     
                     <h2>{{$item->name}}</h2>
-                    <h5>{{$item->description}}</h5>
+                    <h4>{{$item->description}}</h4>
+                    <h5>Tsh  {{$item->price}}</h5>
+
                     
                 </div>
                 <div class="col-sm-3">

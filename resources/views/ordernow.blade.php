@@ -31,9 +31,15 @@
                   <input type="text" name="address" class="form-control" placeholder="enter your Address"><br>
                 </div>
                 <div class="form-group">
+                    <textarea name="description" id="1" cols="60" rows="5" placeholder="Any description"></textarea>
+                </div>  
+                <div class="form-group">
+                  <input type="number" name="phone" class="form-control" placeholder="enter phone number"><br>
+                </div>
+                <div class="form-group">
                   <label for="pwd">Payment Method</label><br>
                   <input type="radio" value="cash" name="control number"><span> Control Number</span><br>
-                  </div>       
+                </div>     
                 <button type="submit" class="btn btn-success">Order Now</button>
               </form>
             

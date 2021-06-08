@@ -25,8 +25,20 @@ if(Session::has('user'))
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> cart({{$total}})</a></li>
-        <li><a href="project/myproject/public/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="project/myproject/public/login"><span class="glyphicon glyphicon-log-in"></span>  Login</a></li>
-      </ul>
+        @if (Session::has('user'))
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{Session::get('user')['fname']}} <span>{{Session::get('user')['lname']}}</span>
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/project/myproject/public/logout">Logout</a></li>
+        </ul>
+      </li>
+      @else
+      <li><a href="/project/myproject/public/login">Login</a></li> 
+      <li><a href="/project/myproject/public/register">Register</a></li>          
+         
+      @endif
+        
+    </ul>
     </div>
   </nav>

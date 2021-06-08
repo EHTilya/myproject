@@ -25,7 +25,7 @@
               </table>
         </div>
         <div>
-            <form action="/project/myproject/public/orderPlace" method="POST">
+            <form action="/project/myproject/public/orderplace" method="POST">
                 @csrf
                 <div class="form-group">
                   <input type="text" name="address" class="form-control" placeholder="enter your Address"><br>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="form-group">
                   <label for="pwd">Payment Method</label><br>
-                  <input type="radio" value="cash" name="control number"><span> Control Number</span><br>
+                  <input type="radio" value="cash" name="payment"><span> Control Number</span><br>
                 </div>     
                 <button type="submit" class="btn btn-success">Order Now</button>
               </form>

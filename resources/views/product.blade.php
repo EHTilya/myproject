@@ -1,6 +1,9 @@
 @extends('master')
 @section('content')
 <div class="custom-product">
+  <div>
+    <a href="/project/myproject/public/category">skirt</a>
+  </div>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -34,21 +37,86 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
+
+<div class="trending-wrapper left">
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-lg " data-toggle="modal" data-target="#myModal1">Open Men Designs</button>
+      
+        <!-- Modal -->
+        <div class="modal fade" id="myModal1" role="dialog">
+          <div class="modal-dialog modal-sm">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <a href="/project/myproject/public/l_shirt" class="">
+                  <img class="category-image"src="{{asset('images/long.png')}}" alt="">
+                </a>
+                <b>Shati la mikono mirefu</b>
+              </div>
+              <div class="modal-body">
+              <a href="/project/myproject/public/m_trouse" class="">
+                  <img class="category-image"src="{{asset('images/m_trouse.jpg')}}" alt="">
+              </a>
+              <b>Suruali</b>
+              </div>
+              <div class="modal-body">
+                <a href="/project/myproject/public/s_shirt" class="">
+                    <img class="category-image"src="{{asset('images/short.jpg')}}" alt="">
+                </a>
+                <b>Shati la mikono mifupi</b>
+                </div>
+                <div class="modal-body">
+                  <a href="/project/myproject/public/short" class="">
+                      <img class="category-image"src="{{asset('images/pant.jpg')}}" alt=""> 
+                  </a>
+                  <b>kaptula</b>
+                  </div>
+      
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+      
 </div>
-<div class="trending-wrapper">
-    <h3>Trending Design</h3>
-    @foreach ($products as $item)
-    <div class="trending-item">
-        <a href="detail/{{$item['id']}}">
-        <img  class="trending-image" src="{{$item['gallery']}}" alt="Chania">
+<div class="trending-wrapper right">
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg " data-toggle="modal" data-target="#myModal">Open Women Designs</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <a href="/project/myproject/public/skirt" class="">
+            <img class="category-image"src="{{asset('images/skirt.png')}}" alt="">
+          </a>
+          <b>Sketi</b>
+        </div>
+        <div class="modal-body">
+        <a href="/project/myproject/public/w_trouse" class="">
+            <img class="category-image"src="{{asset('images/w_trouse.jpg')}}" alt="">
         </a>
-        <div class="">
-          <h3>{{$item['name']}}</h3>
+        <b>Suruali</b>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
       
-    @endforeach
-</div>
+    </div>
+  </div>
+  
 
-    
+
+
+
 @endsection

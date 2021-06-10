@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\user;
+use App\Models\Category;
 use Illuminate\Support\Facades\Hash;
 
 
@@ -34,5 +35,15 @@ class UserController extends Controller
         $user->password= Hash::make($req->password);
         $user->save();
         return redirect('login');
+    }
+
+    function category(Request $req)
+    {
+        $category = new category;
+        $category->name=$req->name;
+        $category->size=$req->size;
+        $category->address=$req->address;
+        $category->save();
+        return redirect('home');
     }
 }

@@ -36,5 +36,11 @@ Route::get('removecart/{id}',[ProductController::class,'removeCart']);
 Route::get('ordernow',[ProductController::class,'orderNow']);
 Route::post('orderplace',[ProductController::class,'orderPlace']);
 Route::get('myorders',[ProductController::class,'myOrders']);
+Route::get('/skirt',[ProductController::class,'skirt']);
+Route::get('/s_shirt',[ProductController::class,'s_shirt']);
+Route::get('/l_shirt',[ProductController::class,'l_shirt']);
+Route::get('/m_trouse',[ProductController::class,'m_trouse']);
+Route::get('/w_trouse',[ProductController::class,'w_trouse']);
+Route::get('/short',[ProductController::class,'short']);
 
 

@@ -60,6 +60,20 @@
     .order-button{
         padding-bottom:10px; 
     }
+    .category-image{
+        height: 80px;
+    }
+    .modal{
+        margin-top: 30px;
+    }
+    .right{
+        
+        float: right;
+    }
+    .left{
+        
+        float: left;
+    }
 </style>
  
 </html>

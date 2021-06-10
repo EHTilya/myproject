@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Cart;
+use App\Models\Category;
 use App\Models\Order;
 use Session;
 use Illuminate\Support\Facades\DB;
@@ -109,6 +110,69 @@ function search(Request $req)
             return view('myorders',['order'=>$order]);
         }
 
-    
+        function l_shirt()
+        {
+            $dress=DB::table('products')
+            ->join('category','products.category_id','=','category.id')
+            ->where('products.category_id',2)
+            ->select('products.*')
+            ->get();
+            return view('category',['dress'=>$dress]);
+        }
+
+        
+        function s_shirt()
+        {
+            $dress=DB::table('products')
+            ->join('category','products.category_id','=','category.id')
+            ->where('products.category_id',1)
+            ->select('products.*')
+            ->get();
+            return view('category',['dress'=>$dress]);
+        }
+
+        
+        function short()
+        {
+            $dress=DB::table('products')
+            ->join('category','products.category_id','=','category.id')
+            ->where('products.category_id',5)
+            ->select('products.*')
+            ->get();
+            return view('category',['dress'=>$dress]);
+        }
+
+        
+        function m_trouse()
+        {
+            $dress=DB::table('products')
+            ->join('category','products.category_id','=','category.id')
+            ->where('products.category_id',6)
+            ->select('products.*')
+            ->get();
+            return view('category',['dress'=>$dress]);
+        }
+
+        
+        function w_trouse()
+        {
+            $dress=DB::table('products')
+            ->join('category','products.category_id','=','category.id')
+            ->where('products.category_id',4)
+            ->select('products.*')
+            ->get();
+            return view('category',['dress'=>$dress]);
+        }
+
+        
+        function skirt()
+        {
+            $dress=DB::table('products')
+            ->join('category','products.category_id','=','category.id')
+            ->where('products.category_id',3)
+            ->select('products.*')
+            ->get();
+            return view('category',['dress'=>$dress]);
+        }
 }
 

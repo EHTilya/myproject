@@ -74,6 +74,7 @@
         
         float: left;
     }
+    
 </style>
  
 </html>

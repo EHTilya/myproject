@@ -10,7 +10,7 @@
         </a>
         <div class="">
           <h3>{{$item->name}}</h3>
-          <h3>{{$item->id}}</h3>
+          <h3>{{$item->category_id}}</h3>
 
         </div>
       </div>

@@ -20,10 +20,22 @@ function index()
 
 function detail($id)
 {
-    $data=Product::find($id);
-    return view('detail',['products'=>$data]);
-
+     $data=Product::find($id);
+     if($data)
+     {
+        $cat = Product::select('category_id')
+                ->where('id',$id)
+                ->first()->category_id;
+            return view('detail')
+              ->with('data',$data)
+              ->with('cat',$cat);
+     }
+     else{
+         return 'failed';
+     }
+        
 }
+
 function search(Request $req)
     {
         $data=$data=Product::where('name','like','%'.$req->input('query').'%')->get();
@@ -37,6 +49,12 @@ function search(Request $req)
             $data= new Cart;
             $data->persons_id=$req->session()->get('user')['id'];
             $data->product_id=$req->product_id;
+            $data->tumbo_kiuno=$req->tumbo_kiuno;
+            $data->hipsi=$req->hipsi;
+            $data->paja=$req->paja;
+            $data->goti=$req->goti;
+            $data->upana_chini=$req->upana_chini;
+            $data->fly=$req->fly;
             $data->save();
             return redirect('home');
             
@@ -173,6 +191,62 @@ function search(Request $req)
             ->select('products.*')
             ->get();
             return view('category',['dress'=>$dress]);
+        }
+
+        function sshirt ()
+        {
+            return $dress1=DB::table('products')
+            ->join('category','products.category_id','=','category.id')
+            ->select('products.category_id',1)
+            ->get();
+            session(['dress1'=>$dress1]);
+        }
+
+        function category_lshirt ()
+        {
+            $dress2=2;
+            return $dress2;
+            Products::where('category_id',2)
+            ->select('category_id')
+            ->get();
+            session(['dress2'=>$dress2]);
+
+        }
+
+        function category_skirt ()
+        {
+            $dress3=Products::where('category_id',3)
+            ->select('category_id')
+            ->get();
+            session(['dress3'=>$dress3]);
+
+        }
+
+        function category_wtrouse ()
+        {
+            $dress4=Products::where('category_id',4)
+            ->select('category_id')
+            ->get();
+            session(['dress4'=>$dress4]);
+
+        }
+
+        function category_short ()
+        {
+            $dress5=Products::where('category_id',5)
+            ->select('category_id')
+            ->get();
+            session(['dress5'=>$dress5]);
+
+        }
+
+        function category_mtrouse ()
+        {
+            $dress6=Products::where('category_id',6)
+            ->select('products.*')
+            ->get();
+            session(['dress6'=>$dress6]);
+
         }
 }
 

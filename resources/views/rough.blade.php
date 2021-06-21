@@ -199,3 +199,77 @@
     
 </div>
 </div>
+
+
+
+function detail($id)
+{
+    $cat = 0;
+    $var = DB::table('products')
+          ->where('id', '=', $id)
+          ->where('category_id', '=', 1)
+          ->get();
+
+    if($var)
+    {
+        $cat = 1;
+        return view('detail', compact('var','cat'));
+    }
+    elseif 
+    ($var = DB::table('products')
+    ->where('id', '=', $id)
+    ->where('category_id', '=', 2)
+    ->get())
+    {
+        $cat = 2;
+
+        return view('detail', compact('var','cat'));
+    }
+    elseif 
+    ($var = DB::table('products')
+    ->where('id', '=', $id)
+    ->where('category_id', '=', 3)
+    ->get())
+    {
+        $cat = 3;
+
+        return view('detail', compact('var','cat'));
+    }
+    elseif 
+    ($var = DB::table('products')
+    ->where('id', '=', $id)
+    ->where('category_id', '=', 4)
+    ->get())
+    {
+        $cat = 4;
+
+        return view('detail', compact('var','cat'));
+    }
+    elseif 
+    ($var = DB::table('products')
+    ->where('id', '=', $id)
+    ->where('category_id', '=', 5)
+    ->get())
+    {
+        $cat = 5;
+
+        return view('detail', compact('var','cat'));
+    }
+    elseif 
+    ($var = DB::table('products')
+    ->where('id', '=', $id)
+    ->where('category_id', '=', 6)
+    ->get())
+    {
+        $cat = 6;
+
+        return view('detail', compact('var','cat'));
+    }
+    else
+
+    $cat = 7;
+        $data = Product::where('id',$id);
+
+        return view('detail', compact('data','cat'));
+    
+}

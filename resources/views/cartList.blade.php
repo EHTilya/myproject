@@ -5,7 +5,7 @@
         <div class="trending-wrapper">
             <h3>Results for selected Design</h3>
             <div class="order-button">
-                <a class="btn btn-success" href="/project/myproject/public/ordernow">Order Now</a>
+                <a class="btn btn-success" href="/ordernow">Order Now</a>
             </div>
             @foreach ($products as $item)
             <div class=" row searched-item cart-list-devider">
@@ -23,11 +23,11 @@
                     
                 </div>
                 <div class="col-sm-3">
-              <a href="/project/myproject/public/removecart/{{$item->cart_id}}" class="btn btn-warning">Remove to cart</a>      
+              <a href="/removecart/{{$item->cart_id}}" class="btn btn-warning">Remove to cart</a>      
                 </div>
             </div>
             @endforeach
-            <a class="btn btn-success" href="/project/eCommerce/orderNow">Order Now</a>
+            <a class="btn btn-success" href="/orderNow">Order Now</a>
 
         </div>
 

@@ -15,7 +15,7 @@
                     <h5>Description: {{$item->description}}</h5>
                     <h5>Delivery Status: {{$item->order_status}}</h5>
                     <h5>Delivery address: {{$item->address}}</h5>
-                    <h5>Order description: {{$item->order_description}}</h5>
+                    <h5>Order description: {{$item->description}}</h5>
                     <h5>Phone Number: {{$item->phone}}</h5>
                     <h5>Description: {{$item->description}}</h5>
                     <h5>Payment method: {{$item->payment_method}}</h5>

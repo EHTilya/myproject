@@ -21,6 +21,12 @@ class CreateOrdersTable extends Migration
             $table->string('address');
             $table->string('payment_method');
             $table->string('description');
+            $table->string('tumbo/kiuno');
+            $table->string('hipsi');
+            $table->string('paja');
+            $table->string('goti');
+            $table->string('upana/chini');
+            $table->string('fly');
             $table->string('order_status');
             
 

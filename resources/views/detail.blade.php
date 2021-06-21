@@ -4,10 +4,10 @@
 <div class="container">
 <div class="row">
     <div class="col-sm-6">
-        <img class="detail-img" src={{$data['gallery']}} alt="">
+        <img class="detail-img" src="{{asset($data['gallery'])}}" alt="">
     </div>
     <div class="col-sm-6">
-        <a href="/project/myproject/public/home">Go Back</a>
+        <a href="/home">Go Back</a>
         <h2>{{$data['name']}}</h2>
         <h3>Price:{{$data['price']}}</h3>
         <h4>Details:{{$data['description']}}</h4>
@@ -29,7 +29,7 @@
                 <div class="modal-body">
                   @if ($cat == 1)
                   <h2>No 1</h2>
-                  <form action="/project/myproject/public/addToCart" method="POST" role="form">
+                  <form action="/addToCart" method="POST" role="form">
                     @csrf
                     <center>
                       <label for="psw"><span></span>Vipimo katika cm </label>
@@ -63,7 +63,7 @@
                
                   @elseif ($cat == 2)
                   
-                  <form action="/project/myproject/public/addToCart" method="POST" role="form">
+                  <form action="/addToCart" method="POST" role="form">
                     @csrf
                     <center>
                       <label for="psw"><span></span>Vipimo katika cm </label>
@@ -98,7 +98,7 @@
                   @elseif ($cat == 3)
 
 
-                  <form action="/project/myproject/public/addToCart" method="POST" role="form">
+                  <form action="/addToCart" method="POST" role="form">
                     @csrf
                     <h2>no 3</h2>
                     <center>
@@ -138,7 +138,7 @@
                   </form>
                 @elseif ($cat == 4)
                   
-                <form action="/project/myproject/public/addToCart" method="POST" role="form">
+                <form action="/addToCart" method="POST" role="form">
                   @csrf
                   <h2>no 4</h2>
                   <center>
@@ -178,7 +178,7 @@
                 </form>
                   @elseif ($cat == 5)
                   
-                  <form action="/project/myproject/public/addToCart" method="POST" role="form">
+                  <form action="/addToCart" method="POST" role="form">
                     @csrf
                     <h2>no 5</h2>
                     <center>
@@ -217,7 +217,7 @@
                     <button type="submit" class="btn btn-default btn-success btn-block"><span ></span> Add to Cart</button>
                   </form>
                   @elseif ($cat == 6)          
-                  <form action="/project/myproject/public/addToCart" method="POST" role="form">
+                  <form action="/addToCart" method="POST" role="form">
                     @csrf
                     <h2>no 6</h2>
                     <center>
@@ -259,7 +259,7 @@
                   @else
                   <p>your other</p>
                   
-                  <form action="/project/myproject/public/addToCart" method="POST" role="form">
+                  <form action="/addToCart" method="POST" role="form">
                     @csrf
                     <center>
                       <label for="psw"><span></span>Vipimo katika cm </label>

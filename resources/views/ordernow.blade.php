@@ -19,13 +19,13 @@
                   </tr>
                   <tr>
                     <td><b>Total Amount</b></td>
-                    <td>Tsh {{$total+10}}</td>
+                    <td>Tsh {{$total+2000}}</td>
                   </tr>
                 </tbody>
               </table>
         </div>
         <div>
-            <form action="/project/myproject/public/orderplace" method="POST">
+            <form action="/orderplace" method="POST">
                 @csrf
                 <div class="form-group">
                   <input type="text" name="address" class="form-control" placeholder="enter your Address"><br>

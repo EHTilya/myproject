@@ -109,7 +109,14 @@ function search(Request $req)
                 $order->payment_method=$req->payment;
                 $order->address=$req->address;
                 $order->phone=$req->phone;
-                $order->order_description=$req->description;
+                $order->description=$req->description;
+                $order->tumbo_kiuno=$cart['tumbo_kiuno'];
+                $order->hipsi=$cart['hipsi'];
+                $order->paja=$cart['paja'];
+                $order->goti=$cart['goti'];
+                $order->upana_chini=$cart['upana_chini'];
+                $order->fly=$cart['fly'];
+                
                 $order->save();
                 $allCart=Cart::where('persons_id',$userId)->delete();
 
@@ -132,7 +139,7 @@ function search(Request $req)
         {
             $dress=DB::table('products')
             ->join('category','products.category_id','=','category.id')
-            ->where('products.category_id',2)
+            ->where('products.category_id',1)
             ->select('products.*')
             ->get();
             return view('category',['dress'=>$dress]);
@@ -143,7 +150,7 @@ function search(Request $req)
         {
             $dress=DB::table('products')
             ->join('category','products.category_id','=','category.id')
-            ->where('products.category_id',1)
+            ->where('products.category_id',2)
             ->select('products.*')
             ->get();
             return view('category',['dress'=>$dress]);
@@ -154,7 +161,7 @@ function search(Request $req)
         {
             $dress=DB::table('products')
             ->join('category','products.category_id','=','category.id')
-            ->where('products.category_id',5)
+            ->where('products.category_id',3)
             ->select('products.*')
             ->get();
             return view('category',['dress'=>$dress]);
@@ -165,7 +172,7 @@ function search(Request $req)
         {
             $dress=DB::table('products')
             ->join('category','products.category_id','=','category.id')
-            ->where('products.category_id',6)
+            ->where('products.category_id',4)
             ->select('products.*')
             ->get();
             return view('category',['dress'=>$dress]);
@@ -176,7 +183,7 @@ function search(Request $req)
         {
             $dress=DB::table('products')
             ->join('category','products.category_id','=','category.id')
-            ->where('products.category_id',4)
+            ->where('products.category_id',6)
             ->select('products.*')
             ->get();
             return view('category',['dress'=>$dress]);
@@ -187,7 +194,7 @@ function search(Request $req)
         {
             $dress=DB::table('products')
             ->join('category','products.category_id','=','category.id')
-            ->where('products.category_id',3)
+            ->where('products.category_id',5)
             ->select('products.*')
             ->get();
             return view('category',['dress'=>$dress]);

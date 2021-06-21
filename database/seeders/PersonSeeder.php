@@ -15,13 +15,25 @@ class PersonSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('persons')->insert([
-            'fname'=>'emma',
-            'lname'=>'Tilya',
-            'email'=>'emma@gmail.com',
-            'username'=>'emma Tilya',
-            'phone'=>1234567,
-            'password'=>Hash::make('12345')
-        ]);
+        DB::table('persons')->insert(
+        [
+            [
+                'fname'=>'paulo',
+                'lname'=>'Tilya',
+                'email'=>'paulo@gmail.com',
+                'role'=>'customer',
+                'phone'=>1234567,
+                'password'=>Hash::make('12345')
+            ],
+            [
+                'fname'=>'mary',
+                'lname'=>'Tilya',
+                'email'=>'mary@gmail.com',
+                'role'=>'customer',
+                'phone'=>1234567,
+                'password'=>Hash::make('12345')
+            ]
+        ]
+    );
     }
 }

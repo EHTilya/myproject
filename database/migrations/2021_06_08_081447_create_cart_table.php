@@ -17,6 +17,12 @@ class CreateCartTable extends Migration
             $table->id();
             $table->integer('product_id');
             $table->integer('persons_id');
+            $table->string('tumbo/kiuno');
+            $table->string('hipsi');
+            $table->string('paja');
+            $table->string('goti');
+            $table->string('upana/chini');
+            $table->string('fly');
             $table->timestamps();
         });
     }

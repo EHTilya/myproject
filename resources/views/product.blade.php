@@ -1,9 +1,7 @@
 @extends('master')
 @section('content')
 <div class="custom-product">
-  <div>
-    <a href="/project/myproject/public/category">skirt</a>
-  </div>
+  
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -50,25 +48,25 @@
             <div class="modal-content">
               <div class="modal-body">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <a href="/project/myproject/public/l_shirt" class="">
+                <a href="/l_shirt" class="">
                   <img class="category-image"src="{{asset('images/long.png')}}" alt="">
                 </a>
                 <b>Shati la mikono mirefu</b>
               </div>
               <div class="modal-body">
-              <a href="/project/myproject/public/m_trouse" class="">
+              <a href="/m_trouse" class="">
                   <img class="category-image"src="{{asset('images/m_trouse.jpg')}}" alt="">
               </a>
               <b>Suruali</b>
               </div>
               <div class="modal-body">
-                <a href="/project/myproject/public/s_shirt" class="">
+                <a href="s_shirt" class="">
                     <img class="category-image"src="{{asset('images/short.jpg')}}" alt="">
                 </a>
                 <b>Shati la mikono mifupi</b>
                 </div>
                 <div class="modal-body">
-                  <a href="/project/myproject/public/short" class="">
+                  <a href="/short" class="">
                       <img class="category-image"src="{{asset('images/pant.jpg')}}" alt=""> 
                   </a>
                   <b>kaptula</b>
@@ -96,13 +94,13 @@
       <div class="modal-content">
         <div class="modal-body">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <a href="/project/myproject/public/skirt" class="">
+          <a href="/skirt" class="">
             <img class="category-image"src="{{asset('images/skirt.png')}}" alt="">
           </a>
           <b>Sketi</b>
         </div>
         <div class="modal-body">
-        <a href="/project/myproject/public/w_trouse" class="">
+        <a href="/w_trouse" class="">
             <img class="category-image"src="{{asset('images/w_trouse.jpg')}}" alt="">
         </a>
         <b>Suruali</b>
